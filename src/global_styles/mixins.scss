@@ -1,0 +1,33 @@
+@mixin text-ellipsis(){
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+@mixin box-shadow($transparency){
+    box-shadow: 0 2px 2px rgba(0,0,0,$transparency);
+}
+
+@mixin font($size, $color: null, $spacing: null, $transform: null){
+    font: $size Roboto,sans-serif;
+    @if($color){
+        color: $color;
+    }
+    @if($spacing){
+        letter-spacing: $spacing;
+    }
+    @if($transform){
+        text-transform: $transform;
+    }
+}
+
+
+@mixin transition($properties, $duration, $animation){
+    $transitions: null;
+    @each $property in $properties{
+        $transitions: append($transitions, $property $duration $animation, comma);
+    }
+
+    transition: $transitions;
+}

@@ -1,0 +1,34 @@
+.root{
+    width: 100%;
+    display: flex;
+    // &:after{
+    //     content: '';
+    //     position: absolute;
+    //     width: 100%;
+    //     height: 100%;
+    //     background: rgba(1, 73, 127, 0.58);
+    // }
+}
+
+.image-wrapper{
+    height: 120%;
+    left: 0;
+    overflow: hidden;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+    background-size: cover;
+    background-position: center;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-size: cover;
+    background-position: center;
+}

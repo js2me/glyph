@@ -1,0 +1,70 @@
+.root {
+    box-sizing: border-box;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.short-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: #ebebeb;
+    justify-content: center;
+    background: rgba(0,0,0,.35);
+    width: 100%;
+    margin-bottom: 12vh;
+    max-height: 490px;
+    height: 100%;
+    /* align-self: center; */
+    > h1 {
+        font-size: 44px;
+        text-transform: uppercase;
+        letter-spacing: 6px;
+        font-weight: 300;
+    }
+    > h3 {
+        margin: 0 auto 40px;
+        font-size: 24px;
+        font-size: 21px;
+        font-weight: 300;
+        color: #d9d9d9;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+    }
+}
+
+.shop-button {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #ff4d4d;
+    border-radius: 4px;
+    width: 230px;
+    padding: 12px 0;
+    margin: 0 auto;
+    height: 24px;
+    line-height: 25px;
+    font-size: 22px;
+    box-shadow: 0 0 10px 0 #ff4d4d;
+    transition: background-color 239ms ease-in,box-shadow 239ms ease;
+    animation: show-button-highlight .7s infinite alternate-reverse;
+    &:hover{
+        background-color: #fe3d3d;
+        box-shadow: 0 0 20px 0 #ff4d4d;
+    }
+}
+
+@keyframes show-button-highlight{
+    100%{
+        background-color: #ff3a3a;
+        box-shadow: 0 0 40px 0 #ff4d4d;
+        transform: scale(1.05)
+    }
+}
+
+.nav-bar{
+    margin: 15.2vh auto 3%;
+}

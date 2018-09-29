@@ -1,0 +1,32 @@
+extends:
+  - standard
+  - standard-react
+  - prettier
+  - prettier/standard
+  - prettier/react
+
+parser: babel-eslint
+
+plugins:
+  - standard
+  - prettier
+
+env:
+  browser: true
+
+globals:
+  isDev: true
+
+rules:
+  prettier/prettier:
+    - error
+    - trailingComma: es5
+      singleQuote: true
+      semi: false
+
+  # TODO: The following rules should be removed incrementally in order to fully
+  # integrate lint rules from the Standard ESLint config and Prettier
+
+  # React Rules
+  react/prop-types: off
+  react/no-unused-prop-types: off
