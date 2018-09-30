@@ -24,6 +24,7 @@ module.exports = {
     publicPath: '/',
     filename: '[name].bundle.js',
     chunkFilename: '[name].chunk.js',
+    globalObject: 'this',
   },
   devtool: optimize ? 'hidden-source-map' : 'cheap-module-eval-source-map',
   target: 'web',
@@ -40,6 +41,11 @@ module.exports = {
       {
         test: /\.js$/,
         loader: 'babel-loader',
+        exclude: /node_modules/,
+      },
+      {
+        test: /\.worker\.js$/,
+        loader: 'worker-loader',
         exclude: /node_modules/,
       },
       {
